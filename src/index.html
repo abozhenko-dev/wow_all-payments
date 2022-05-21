@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Payments</title>
+
+    <meta name="description" lang="ru" content="Description">
+    <meta name="keywords" lang="ru" content="">
+
+    <link rel="preload" href="fonts/Circular-Black.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Circular-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+</head>
+
+<body>
+    @include("./html/loader.html")
+    <div class="wrapper">
+        @include("./html/header.html")
+        <main>
+            @include("./html/mainPage/main.html")
+            @include("./html/mainPage/advantages.html")
+            @include("./html/mainPage/programm.html")
+            @include("./html/mainPage/trust.html")
+            @include("./html/mainPage/numbers.html")
+            @include("./html/modals/contact-modal.html")
+            @include("./html/modals/thanks-modal.html")
+            @include("./html/modals/subscription-modal.html")
+            @include("./html/modals/partner-modal.html")
+            @include("./html/modals/whatsup.html")
+        </main>
+        <footer class="footer footer--main">
+            <div class="container">
+                <div class="footer__top">
+                    <div class="footer__logo">
+                        <a href="index.html">
+                            <img src="img/ui/footer-logo.svg" width="117" height="94" loading="lazy"
+                                alt="Logotype All payments">
+                        </a>
+                    </div>
+                    <nav class="footer__nav">
+                        <div class="footer__nav-item">
+                            <div class="footer__title">
+                                Categories
+                            </div>
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-list-item">
+                                    <a href="#" class="footer__nav-link">
+                                        Services
+                                    </a>
+                                </li>
+                                <li class="footer__nav-list-item">
+                                    <a href="#" class="footer__nav-link">
+                                        Company
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__nav-item">
+                            <div class="footer__title">
+                                Resources
+                            </div>
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-list-item">
+                                    <a href="#" class="footer__nav-link">
+                                        Blog
+                                    </a>
+                                </li>
+                                <li class="footer__nav-list-item">
+                                    <a href="#" class="footer__nav-link">
+                                        Webinars
+                                    </a>
+                                </li>
+                                <li class="footer__nav-list-item">
+                                    <a href="#" class="footer__nav-link">
+                                        Events
+                                    </a>
+                                </li>
+                                <li class="footer__nav-list-item">
+                                    <a href="#" class="footer__nav-link">
+                                        Case Studies
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="footer__nav-item footer__nav-item--contacts">
+                        <div class="footer__title">
+                            Our contacts
+                        </div>
+                        <ul class="footer__nav-list">
+                            <li class="footer__nav-list-item">
+                                <a href="mailto:info@gmail.com" class="footer__nav-link footer__nav-link--mail">
+                                    Info@gmail.com
+                                </a>
+                            </li>
+                            <li class="footer__nav-list-item">
+                                <a href="tel:+4412222341231" class="footer__nav-link footer__nav-link--phone">
+                                    +44 (1) 222 234 1231
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="footer__socials">
+                            <a href="#" class="footer__social">
+                                <img src="img/ui/facebook.svg" width="34" height="34" loading="lazy"
+                                    alt="Look our Facebook">
+                            </a>
+                            <a href="#" class="footer__social">
+                                <img src="img/ui/instagram.svg" width="34" height="34" loading="lazy"
+                                    alt="Look our Instagram">
+                            </a>
+                            <a href="#" class="footer__social">
+                                <img src="img/ui/twitter.svg" width="34" height="34" loading="lazy"
+                                    alt="Look our Twitter">
+                            </a>
+                            <a href="#" class="footer__social">
+                                <img src="img/ui/linkedin.svg" width="34" height="34" loading="lazy"
+                                    alt="Look our LinkedIn">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__bottom-credits">
+                        <p>
+                            @ 2021. All rights reserved
+                        </p>
+                        <a href="#">
+                            Terms of use
+                        </a>
+                    </div>
+                    <div class="footer__bottom-promotion">
+                        <a href="#">
+                            <img src="img/ui/bozhenko.svg" width="120" height="28" loading="lazy"
+                                alt="Bozhenko - Design and Promotion">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

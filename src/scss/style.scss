@@ -1,0 +1,187 @@
+//<МИКСИНЫ>===================================
+@import "mixins";
+//</МИКСИНЫ>======================================
+
+//<ШРИФТЫ>======================================
+
+//<Подключаем шрифты>===================
+@import "fonts";
+//</Подключаем шрифты>==================
+
+//<Иконочные шрифты>======================================
+
+//</Иконочные шрифты>=====================================
+
+//<Шрифт по умолчанию>============================
+$font-family: "Montserrat", sans-serif;
+//</Шрифт по умолчанию>=============================
+
+//</ШРИФТЫ>======================================
+
+//<ПЕРЕМЕННЫЕ>============================
+
+// Ширина макета для адаптивного шрифта
+$maxWidth: 1920;
+
+// Ширина контейнера
+$mw: 1500;
+$ms: 0.3s;
+
+//</ПЕРЕМЕННЫЕ>============================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+:root {
+    --clr-light: #fff;
+    --clr-dark: #333;
+    --clr-dark-2: #242424;
+    --clr-text: #576571;
+    --clr-blue: #334656;
+    --clr-blue-2: #576fff;
+    --clr-border: #f3f3f3;
+    --clr-bg: #f7f8ff;
+}
+@import "normalize";
+@import "../../node_modules/choices.js/public/assets/styles/choices.min.css";
+
+body {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--clr-dark);
+
+    &.lock {
+        overflow: hidden;
+
+        .wrapper::before {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity $ms, visibility $ms;
+        }
+    }
+}
+
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+main {
+    flex-grow: 1;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    min-width: 320px;
+    min-height: 100%;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 5;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity $ms, visibility $ms;
+    }
+}
+
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+    max-width: $mw + px;
+
+    @media (max-width: 1500px) {
+        max-width: ($mw - 300) + px;
+    }
+
+    @media (max-width: 1100px) {
+        max-width: ($mw - 550) + px;
+    }
+}
+
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+// Подключение общих элементов
+@import "../../node_modules/swiper/swiper.scss";
+
+@import "ui";
+// Подключение общих элементов
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+@import "./components/loader.scss";
+@import "./components/header.scss";
+
+@import "./components/mainPage/main.scss";
+@import "./components/mainPage/advantages.scss";
+@import "./components/mainPage/programm.scss";
+@import "./components/mainPage/trust.scss";
+@import "./components/mainPage/numbers.scss";
+
+@import "./components/servicesPage/digits.scss";
+@import "./components/servicesPage/why.scss";
+@import "./components/servicesPage/solutions.scss";
+
+@import "./components/blogPage/blog-banner.scss";
+@import "./components/blogPage/blog-main.scss";
+
+@import "./components/partnerPage/features.scss";
+@import "./components/partnerPage/faq.scss";
+
+@import "./components/paymentsPage/payments-descr.scss";
+@import "./components/paymentsPage/countries.scss";
+@import "./components/paymentsPage/payments-method.scss";
+
+@import "./components/aboutPage/values.scss";
+@import "./components/aboutPage/history.scss";
+@import "./components/aboutPage/team.scss";
+
+@import "./components/pagination.scss";
+@import "./components/modals/contact-modal.scss";
+@import "./components/modals/thanks-modal.scss";
+@import "./components/modals/partner-modal.scss";
+@import "./components/modals/whatsup.scss";
+@import "./components/consultation.scss";
+@import "./components/footer.scss";
+@import "./components/seo.scss";
+
+@keyframes swing {
+    0% {
+        transform: rotate(2deg) translate(-2%, -1%);
+    }
+
+    100% {
+        transform: rotate(-2deg) translate(2%, 1%);
+    }
+}
+
+@keyframes swing-mobile {
+    0% {
+        transform: rotate(5deg) translate(5%, 0);
+    }
+
+    100% {
+        transform: rotate(-5deg) translate(0, -3%);
+    }
+}
+
+@keyframes swing-plane {
+    0% {
+        transform: rotate(25deg) translate(100%, 0);
+    }
+
+    100% {
+        transform: rotate(0deg) translate(0, 0);
+    }
+}
+
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+// 1600 1500 1300 1100 768 700 576 500 415

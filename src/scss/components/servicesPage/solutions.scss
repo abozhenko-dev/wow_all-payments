@@ -1,0 +1,197 @@
+.solutions {
+    margin-bottom: 170px;
+
+    @media (max-width: 768px) {
+        margin-top: 120px;
+        margin-bottom: 70px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        margin-right: 2%;
+        margin-bottom: 2%;
+        width: calc((100% / 3) - (4% / 3));
+
+        @media (min-width: 769px) {
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: 768px) and (min-width: 577px) {
+            width: calc((100% / 2) - (2% / 2));
+
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            margin-right: 0;
+            width: 100%;
+        }
+    }
+}
+.solution {
+    &__card {
+        display: flex;
+        flex-direction: column;
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 30px;
+        padding: 20px;
+        height: 100%;
+        max-width: 470px;
+        box-shadow: 0 0 2px rgba(177, 183, 199, 0.4), 0 20px 30px rgba(187, 189, 209, 0.12);
+        background-color: var(--clr-light);
+        transition: box-shadow $ms, border-radius $ms;
+
+        @media (min-width: 993px) {
+            &:hover,
+            &:focus {
+                border-radius: 15px;
+                box-shadow: 0 0 10px rgba(177, 183, 199, 0.4), 0 25px 35px rgba(187, 189, 209, 0.12);
+                transition: box-shadow $ms, border-radius $ms;
+            }
+        }
+
+        @media (max-width: 768px) {
+            padding: 15px;
+        }
+    }
+
+    &__image {
+        border-radius: 14px;
+        width: 100%;
+        max-width: 430px;
+        max-height: 277px;
+
+        img {
+            border-radius: 14px;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        padding: 20px 10px;
+
+        a:first-child {
+            flex-grow: 1;
+        }
+
+        @media (max-width: 992px) {
+            padding: 20px 0;
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 23px;
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--clr-text);
+    }
+
+    &__date {
+        border-radius: 3px;
+        padding: 5px 18px;
+        font-size: 12px;
+        color: var(--clr-light);
+        background-color: var(--clr-blue-2);
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 23px;
+        color: var(--clr-blue);
+
+        @media (max-width: 1500px) {
+            font-size: 21px;
+        }
+
+        @media (max-width: 1100px) {
+            font-size: 20px;
+        }
+
+        @media (max-width: 992px) {
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 20px;
+        }
+    }
+
+    &__descr {
+        margin-bottom: 40px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 167%;
+        color: var(--clr-text);
+
+        @media (max-width: 1500px) {
+            font-size: 16px;
+        }
+
+        @media (max-width: 1100px) {
+            font-size: 14px;
+        }
+
+        @media (max-width: 992px) {
+            font-size: 12px;
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__link {
+        position: relative;
+        color: var(--clr-blue-2);
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 115px;
+            top: 50%;
+            width: 41px;
+            height: 8px;
+            background-image: url("../img/ui/read-arrow.svg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            transform: translateY(-35%);
+            transition: left $ms;
+
+            @media (max-width: 576px) {
+                left: 90px;
+            }
+        }
+
+        @media (min-width: 993px) {
+            &:hover,
+            &:focus {
+                &::after {
+                    left: 122px;
+                    transition: left $ms;
+                }
+            }
+        }
+
+        @media (max-width: 576px) {
+            font-size: 14px;
+        }
+    }
+}

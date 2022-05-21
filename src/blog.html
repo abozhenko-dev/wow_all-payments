@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Payments</title>
+
+    <meta name="description" lang="ru" content="Очень красивое, точное и правильное описание сайта для оптимизации">
+    <meta name="keywords" lang="ru" content="">
+
+    <link rel="preload" href="fonts/Circular-Black.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Circular-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="header__logo">
+                        <a href="index.html">
+                            <img src="img/ui/logo@2x.png" width="195" height="56" alt="All Payments logotype">
+                        </a>
+                    </div>
+                    <div class="header__page">
+                        Blog
+                    </div>
+                    <nav class="header__nav">
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item header__nav-item--expanded">
+                                <a class="header__nav-link" href="payment.html">
+                                    Services
+                                </a>
+                                <div class="header__menu">
+                                    <div class="header__menu-overview">
+                                        <span>OVERVIEW</span>
+                                        <a href="payment.html" class="header__menu-overview-title">
+                                            Our services
+                                        </a>
+                                    </div>
+                                    <ul class="header__menu-list">
+                                        <li class="header__menu-item header__menu-item--service1">
+                                            <a href="payment.html">
+                                                Payment support
+                                            </a>
+                                        </li>
+                                        <li class="header__menu-item header__menu-item--service2">
+                                            <a href="banking.html">
+                                                Banking support
+                                            </a>
+                                        </li>
+                                        <li class="header__menu-item header__menu-item--service3">
+                                            <a href="legal.html">
+                                                Legal & Advisory Solutions
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="header__menu-list">
+                                        <li class="header__menu-item header__menu-item--service4">
+                                            <a href="merchant.html">
+                                                Merchant solutions
+                                            </a>
+                                        </li>
+                                        <li class="header__menu-item header__menu-item--service5">
+                                            <a href="crypto.html">
+                                                Cryptocurrency solution
+                                            </a>
+                                        </li>
+                                        <li class="header__menu-item header__menu-item--service6">
+                                            <a href="#">
+                                                Cost optimization
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="header__nav-item header__nav-item--expanded">
+                                <a class="header__nav-link" href="about.html">
+                                    Company
+                                </a>
+                                <div class="header__menu">
+                                    <div class="header__menu-overview">
+                                        <span>OVERVIEW</span>
+                                        <a href="about.html" class="header__menu-overview-title">
+                                            Company
+                                        </a>
+                                    </div>
+                                    <ul class="header__menu-list">
+                                        <li class="header__menu-item header__menu-item--company1">
+                                            <a href="about.html">
+                                                About Us
+                                            </a>
+                                        </li>
+                                        <li class="header__menu-item header__menu-item--company2">
+                                            <a href="partner.html">
+                                                Referral & affiliates
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="header__nav-item">
+                                <a class="header__nav-link" href="blog.html">
+                                    Blog
+                                </a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a class="header__nav-link" href="payments.html">
+                                    Payments Optimization
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__lang">
+                        <div class="header__lang-choosed header__lang-choosed--usa">
+                            ENG
+                        </div>
+                        <ul class="header__lang-dropdown">
+                            <li>
+                                <a class="header__lang-dropdown-link header__lang-choosed header__lang-choosed--usa"
+                                    href="#">
+                                    ENG
+                                </a>
+                            </li>
+                            <!-- <li>
+                                <a class="header__lang-dropdown-link header__lang-choosed header__lang-choosed--usa" href="#">
+                                    ENGL
+                                </a>
+                            </li>
+                            <li>
+                                <a class="header__lang-dropdown-link header__lang-choosed header__lang-choosed--usa" href="#">
+                                    ENGL
+                                </a>
+                            </li> -->
+                        </ul>
+                    </div>
+                    <button class="header__btn contact-us">
+                        Let's talk
+                    </button>
+                    <button class="header__burger" aria-label="Open or close navigation menu">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main>
+            @include("./html/blogPage/blog-banner.html")
+            @include("./html/blogPage/blog-main.html")
+            @include("./html/modals/contact-modal.html")
+            @include("./html/modals/thanks-modal.html")
+            @include("./html/modals/subscription-modal.html")
+            @include("./html/modals/partner-modal.html")
+            @include("./html/modals/whatsup.html")
+        </main>
+        @include("./html/footer.html")
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
